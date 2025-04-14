@@ -4,7 +4,7 @@ A Model Context Protocol (MCP) server for accessing and analyzing Federal Reserv
 
 ## Overview
 
-This server provides a secure way to interact with a Federal Reserve statements database using the Model Context Protocol. It follows the Proxy Server Architecture pattern, where this public component contains no sensitive credentials and forwards requests to a private API server that contains the actual database access logic.
+This server provides a Model Context Protocol (MCP) interface for accessing and analyzing Federal Reserve (FOMC) statements. It enables semantic search and analysis of FOMC statements while handling all the complexity of data retrieval and processing behind a clean, tool-based interface.
 
 ## Features
 
@@ -44,11 +44,11 @@ uv pip install .
 
 The server can be configured using environment variables:
 
-- `FEDSPEAK_API_ENDPOINT`: URL of the backend service that handles all database connections (Firestore) and retrieves FOMC statement data for search, analysis, and metadata operations (default: "https://fedspeak-mcp-backend-671377599496.us-central1.run.app")
+- `FEDSPEAK_API_ENDPOINT`: URL of the backend API service for data operations (default: "https://fedspeak-mcp-backend-671377599496.us-central1.run.app")
 - `LOG_LEVEL`: Logging level (default: "INFO")
 - `LOG_FILE`: Log file path (default: "fedspeak_mcp_server.log")
 
-**Note:** All database interactions (including Firestore) are handled by the backend API service. You do not need to configure any database credentials in this MCP server.
+**Note:** No additional configuration is needed for data access - all required connections are handled automatically.
 
 ## Usage
 
