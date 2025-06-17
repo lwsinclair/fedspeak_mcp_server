@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/milind-kulshrestha-fedspeak-mcp-server-badge.png)](https://mseep.ai/app/milind-kulshrestha-fedspeak-mcp-server)
+
 # Fedspeak MCP Server
 
 A Model Context Protocol (MCP) server for accessing and analyzing Federal Reserve (FOMC) statements.
